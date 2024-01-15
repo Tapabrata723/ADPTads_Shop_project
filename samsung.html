@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADPTads Shop</title>
+    <link rel="icon" type="image/png" href="images/favicon-16x16.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- bootstrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- bootstrap links -->
+    <style>
+      div.scroll-container {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+div.scroll-container img {
+  padding: 10px;
+}
+    </style>
+    <!-- fonts links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="trackUser.js" ></script>
+    <script type="text/javascript" src="logout.js" ></script>
+    <script type="text/javascript">
+      var udata=localStorage.getItem('uinfo');
+      var user=JSON.parse(udata);
+    </script>
+
+    <!-- fonts links -->
+</head>
+<body style="background-color: #1F2833;">
+    <nav class="navbar navbar-expand-lg" id="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html" id="logo"><span id="span1">ADPT</span>ads<span>Shop</span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span><img src="./images/menu.png" alt="" width="30px"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Category
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: rgb(67 0 86);">
+                  <li><a class="dropdown-item" href="#">Samrt Phone</a></li>
+                  <li><a class="dropdown-item" href="#">Mobile Phone</a></li>
+                  <li><a class="dropdown-item" href="#">Fridge</a></li>
+                  <li><a class="dropdown-item" href="#">Samrt Watch</a></li>
+                  <li><a class="dropdown-item" href="#">Headphone</a></li>
+                  <li><a class="dropdown-item" href="#">Laptop</a></li>
+                  <li><a class="dropdown-item" href="#">PC Moniter</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+        <div class="icons">
+          
+          <a href="#" onclick="logOut();"><img src="./images/register.png" alt="" width="18px">Logout</a><br></div>
+        
+        </div>
+        </nav>
+
+
+
+        
+<section>
+        <div class="container">
+          <div class="row">
+            <!-- Left sidebar -->
+            <div class="col-lg-8">
+              <div class="product-details"><br><br><br>
+                <h1 class="product-title" style="color: #45A29E;" >Sumsung Galaxy A50s</h1><br><br><br>
+                <div class="product-meta">
+                  <ul class="list-inline">
+                    <li class="list-inline-item" style="color: aliceblue;"><i class="fa fa-user-o"></i> By <a href="user-profile.html">Pranoy</a></li>
+                    <li class="list-inline-item" style="color: aliceblue;"><i class="fa fa-folder-open-o"></i> Category<a href="category.html">Electronics</a></li>
+                    <li class="list-inline-item" style="color: aliceblue;"><i class="fa fa-location-arrow"></i> Location<a href="https://maps.app.goo.gl/Y4kNNxTGQ6wVLT9G7">Behala Kolkata</a></li>
+                  </ul><br><br><br>
+                </div>
+      
+                <!-- product slider -->
+                <div class="scroll-container">
+                  <img src="images/sam1.jpg" alt="Cinque Terre" width="601" height="801">
+                  <img src="images/sam2.jpg" alt="Forest" width="601" height="801">
+                  <img src="images/sam3.jpg" alt="Northern Lights" width="601" height="801">
+                  <img src="images/sam4.jpg" alt="Mountains" width="601" height="801">
+                </div>
+                <!-- product slider -->
+      
+                <div class="content mt-5 pt-5" style="color: #45A29E;">
+                  <ul class="nav nav-pills  justify-content-center" id="pills-tab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home"
+                       aria-selected="true">Product Details</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile"
+                       aria-selected="false">Specifications</a>
+                    </li>
+                  </ul><br><br>
+                  <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                      <h3 class="tab-title">Product Description</h3>
+                      <table class="table table-bordered product-table" style="color: aquamarine;">
+                        <tbody>
+                          <tr>
+                            <td>Seller Price</td>
+                            <td>5000</td>
+                          </tr>
+                          <tr>
+                            <td>Added</td>
+                            <td>26th December</td>
+                          </tr>
+                          <tr>
+                            <td>State</td>
+                            <td>Kolkata</td>
+                          </tr>
+                          <tr>
+                            <td>Brand</td>
+                            <td>Samsung</td>
+                          </tr>
+                          <tr>
+                            <td>Condition</td>
+                            <td>Used</td>
+                          </tr>
+                          <tr>
+                            <td>Model</td>
+                            <td>2017</td>
+                          </tr>
+                          <tr>
+                            <td>State</td>
+                            <td>Behala</td>
+                          </tr>
+                          <tr>
+                            <td>Battery Life</td>
+                            <td>23</td>
+                          </tr>
+                          <tr>
+                            <td>Find in Google map</td>
+                            <td><a href="https://maps.app.goo.gl/Y4kNNxTGQ6wVLT9G7">Click here</a></td>
+                          </tr>
+                          <tr>
+                            <td>Contact Details</td>
+                            <td>7003383913</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                      
+                      <p></p>
+                      
+      
+                    </div>
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                      <h3 class="tab-title">Product Specifications</h3>
+                      
+                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                      <h3 class="tab-title">Product Review</h3>
+                      <div class="product-review">
+                        <div class="media">
+                          <!-- Avater -->
+                          <img src="images/user/user-thumb.jpg" alt="avater">
+                          <div class="media-body">
+                            <!-- Ratings -->
+                            <div class="ratings">
+                              <ul class="list-inline">
+                                <li class="list-inline-item">
+                                  <i class="fa fa-star"></i>
+                                </li>
+                                <li class="list-inline-item">
+                                  <i class="fa fa-star"></i>
+                                </li>
+                                <li class="list-inline-item">
+                                  <i class="fa fa-star"></i>
+                                </li>
+                                <li class="list-inline-item">
+                                  <i class="fa fa-star"></i>
+                                </li>
+                                <li class="list-inline-item">
+                                  <i class="fa fa-star"></i>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="name">
+                              <h5>Pronay Brown</h5>
+                            </div>
+                            <div class="date">
+                              <p>Mar 20, 2018</p>
+                            </div>
+                            <div class="review-comment">
+                            
+                            </div>
+                          </div>
+                        </div>
+                        <div class="review-submission">
+                          <h3 class="tab-title">Submit your review</h3>
+                          <!-- Rate -->
+                          <div class="rate">
+                            <div class="starrr"></div>
+                          </div>
+                          <div class="review-submit">
+                            <form action="#" method="POST" class="row">
+                              <div class="col-lg-6 mb-3">
+                                <input type="text" name="name" id="name" class="form-control" placeholder="Name" required>
+                              </div>
+                              <div class="col-lg-6 mb-3">
+                                <input type="email" name="email" id="email" class="form-control" placeholder="Email" required>
+                              </div>
+                              <div class="col-12 mb-3">
+                                <textarea name="review" id="review" rows="6" class="form-control" placeholder="Message" required></textarea>
+                              </div>
+                              <div class="col-12">
+                                <button type="submit" class="btn btn-main" style="color: #2ad6cd;">Sumbit</button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="sidebar">
+                <div class="widget price text-center">
+                  <h4>Price</h4>
+                  <p>₹230</p>
+                </div>
+                <!-- User Profile widget --> <br><br><br><br><br><br><br><br><br><br><br>
+                <div class="widget user text-center">
+                  <img class="rounded-circle img-fluid mb-5 px-5" src="images/user/user-thumb.jpg" alt="">
+                  <h4><a href="user-profile.html">Tapabrata Mondal</a></h4>
+                  <p class="member-time">Member Since Jun 12, 2024</p>
+                  <a href="single.html">See all ads</a>
+                  <ul class="list-inline mt-20">
+                    <li class="list-inline-item"><a href="contact-us.html" class="btn btn-contact d-inline-block  btn-primary px-lg-5 my-1 px-md-3">Contact</a></li>
+                    <li class="list-inline-item"><a href="single.html" class="btn btn-offer d-inline-block btn-primary ml-n1 my-1 px-lg-4 px-md-3">Make an
+                        offer</a></li>
+                  </ul>
+                </div>
+                <!-- Map Widget -->
+                <div class="widget map">
+                  <div class="map">
+                    <div id="map" data-latitude="51.507351" data-longitude="-0.127758"></div>
+                  </div>
+                </div>
+                <!-- Rate Widget -->
+                <div class="widget rate">
+                  <!-- Heading -->
+                  <h5 class="widget-header text-center" style="color: #2ad6cd;">What would you rate
+                    <br>
+                    this product</h5>
+                  <!-- Rate -->
+                  <div class="starrr"></div>
+                </div>
+                <!-- Safety tips widget -->
+                <div class="widget disclaimer">
+                  <h5 class="widget-header">Safety Tips</h5>
+                  <ul style="color: aqua;">
+                    <li>Meet seller at a public place</li>
+                    <li>Check the item before you buy</li>
+                    <li>Pay only after collecting the item</li>
+                    <li>Pay only after collecting the item</li>
+                  </ul>
+                </div>
+                <!-- Coupon Widget -->
+                <div class="widget coupon text-center">
+                  <!-- Coupon description -->
+                  <p style="color: #2ad6cd;">Have a great product to post ? Share it with
+                    your fellow users.
+                  </p>
+                  <!-- Submii button -->
+                  <a href="single.html" class="btn btn-transparent-white" style="background-color: #2ad6cd;">Submit Listing</a>
+                </div>
+      
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      </section>
+
+      <!-- newslater -->
+    <div class="container" id="newslater">
+      <h3 class="text-center">Subscribe To ADPTAds Shop For Latest upload.</h3>
+      <div class="input text-center">
+        <input type="text" placeholder="Enter Your Email..">
+        <button id="subscribe">SUBSCRIBE</button>
+      </div>
+    </div>
+    <!-- newslater -->
+
+          <footer id="footer">
+            <div class="footer-top">
+              <div class="container">
+                <div class="row">
+      
+                  <div class="col-lg-3 col-md-6 footer-contact">
+                    <h3>ADPTAds Shop</h3>
+                    <p>
+                      Kolkata <br>
+                      24 paraganas <br>
+                      India <br>
+                    </p>
+                    <strong>Phone:</strong> +917003383913 <br>
+                    <strong>Email:</strong> gmitpc5@gmail.com <br>
+                  </div>
+      
+                  <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Usefull Links</h4>
+                   <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Terms of service</a></li>
+                    <li><a href="#">Privacy policey</a></li>
+                   </ul>
+                  </div>
+      
+      
+      
+                 
+      
+                  <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Our Services</h4>
+      
+                   <ul>
+                    <li><a href="#">PS 5</a></li>
+                    <li><a href="#">Computer</a></li>
+                    <li><a href="#">Games</a></li>
+                    <li><a href="#">Wallpaper</a></li>
+                    <li><a href="#">Gaming Gadgets</a></li>
+                   </ul>
+                  </div>
+      
+                  <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Our Social Networks</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia, quibusdam.</p>
+      
+                    <div class="socail-links mt-3">
+                      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                      <a href="#"><i class="fa-brands fa-skype"></i></a>
+                      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                  
+                  </div>
+      
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="container py-4">
+              <div class="copyright">
+                &copy; Copyright <strong><span>ADPTAds Shop</span></strong>. All Rights Reserved
+              </div>
+              <div class="credits">
+               <p> Designed by  <i style="color:#000084">Tapabrata & Dibyajit,<br>Pranoy & Argha</i></p>
+              </div>
+            </div>
+          </footer>
+          <!-- footer -->
+      
+      
+      
+      
+      
+      
+      
+          <a href="#" class="arrow"><i><img src="images/900980-removebg-preview (1).png" alt=""></i></a>        
+         
+
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+          <script src="app.js"></script>
+        </body>   
+</html>       

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADPTads Shop</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <!-- bootstrap links -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- bootstrap links -->
+  <!-- fonts links -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+
+    <!-- fonts links -->
+    <script>
+      var a;
+      function pass()
+      {
+          if (a==1){
+              document.getElementById('password').type='password';
+              document.getElementById('pass-icon').src='images/passhide.png';
+              a=0;
+          }     
+          else {
+            document.getElementById('password').type='text';
+              document.getElementById('pass-icon').src='images/passshow.png';
+          }
+      }
+  </script>
+  <script>
+    function logIn(){
+        var email_id=document.getElementById('email_id').value;
+        var password=document.getElementById('password').value;
+        if(email_id!="" && password!=""){
+            var arr=new Array(email_id, password);
+            var jData=JSON.stringify(arr);
+            localStorage.setItem('uinfo',jData);
+            window.location='index.html';
+        }else{
+            alert('Please insert email and password');
+        }
+    }
+</script>
+</head>
+<body id="bodyimg">
+
+    <!-- top navbar -->
+    <nav class="navbar navbar-expand-lg" id="navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html" id="logo"><span id="span1">ADPT</span>ads<span>Shop</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span><img src="./images/menu.png" alt="" width="30px"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Category
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: rgb(67 0 86);">
+                <li><a class="dropdown-item" href="#">Samrt Phone</a></li>
+                <li><a class="dropdown-item" href="#">Mobile Phone</a></li>
+                <li><a class="dropdown-item" href="#">Samrt Watch</a></li>
+                <li><a class="dropdown-item" href="#">Headphone</a></li>
+                <li><a class="dropdown-item" href="#">Laptop</a></li>
+                <li><a class="dropdown-item" href="#">PC Moniter</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          
+        </div>
+      </div>
+      <div class="icons"> 
+           <a href="register.html"><img src="./images/register.png" alt="" width="18px">Register</a>
+      </div>
+    </nav> 
+    <!-- navbar --
+        <!-- Post Your ad start -->
+        <fieldset class="border border-gary px-3 px-md-4 py-4 mb-5"  style="color: #45A29E;">
+          <div class="row">
+            <div class="col-lg-12">
+              <h3>Post Your ad</h3>
+            </div>
+            <div class="col-lg-6">
+              <h6 class="font-weight-bold pt-4 pb-1">Title Of Ad:</h6>
+              <input type="text" class="form-control bg-white" placeholder="Ad title go There" required>
+              <h6 class="font-weight-bold pt-4 pb-1">Ad Type:</h6>
+              <div class="row px-3">
+                <div class="col-lg-4 mr-lg-4 my-2 pt-2 pb-1 rounded bg-white">
+                  <input type="radio" name="itemName" value="personal" id="personal" required>
+                  <label for="personal" class="py-2">Personal</label>
+                </div>
+                <div class="col-lg-4 mr-lg-4 my-2 pt-2 pb-1 rounded bg-white ">
+                  <input type="radio" name="itemName" value="business" id="business" required>
+                  <label for="business" class="py-2">Business</label>
+                </div>
+              </div>
+              <h6 class="font-weight-bold pt-4 pb-1">Description:</h6>
+              <textarea name="" id="" class="form-control bg-white" rows="8.9"
+                placeholder="Write details about your product" required></textarea>
+            </div>
+            <div class="col-lg-6">
+              <h6 class="font-weight-bold pt-4 pb-1">Select Ad Category:</h6>
+              <select name="" class="form-control w-100 bg-white" id="inputGroupSelect">
+                <option value="1">Select category</option>
+                <option value="2">Laptops</option>
+                <option value="3">Mobile Phone</option>
+                <option value="4">Smart Watch</option>
+                <option value="5">monitors</option>
+                <option value="6">Earphones</option>
+                <option value="7">Neckband</option>
+                <option value="8">Headphones</option>
+                <option value="9">PC</option>
+               
+              </select>
+              <div class="price">
+                <h6 class="font-weight-bold pt-4 pb-1">Item Price (₹ INR):</h6>
+                <div class="row px-3">
+                  <div class="col-lg-4 rounded my-2 px-0">
+                    <input type="text" name="price" class="form-control bg-white" placeholder="Price" id="price">
+                  </div>
+                  <div class="col-lg-4 ml-lg-4 my-2 pt-2 pb-1 rounded bg-white ">
+                    <input type="radio" name="itemName" value="Negotiable" id="Negotiable">
+                    <label for="Negotiable" class="py-0.5">Negotiable</label>
+                  </div>
+                </div>
+              </div>
+              <h6 class="font-weight-bold pt-4 pb-1">Upload file size: 500 KB</h6>
+              <div class="choose-file text-center my-4 py-4 rounded bg-white">
+                
+                <label for="file-upload">
+                  <span class="d-block font-weight-bold text-dark">Drop files anywhere to upload</span>
+                  <span class="d-block">or</span>
+                  <h6 class="font-weight-bold pt-4 pb-1">Maximum upload file size: 500 KB</h6>
+                  <span class="d-block btn bg-primary text-white my-3 select-files">Select files</span>
+                  <input type="file" class="form-control-file d-none" id="file-upload" name="file">
+                </label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <!-- Post Your ad end -->
+  
+        <!-- seller-information start -->
+        <fieldset class="border px-3 px-md-4 py-4 my-5 seller-information bg-gray">
+          <div class="row">
+            <div class="col-lg-12">
+              <h3 style="color: #45A29E;">Seller Information</h3>
+            </div>
+            <div class="col-lg-6">
+              <h6 class="font-weight-bold pt-4 pb-1">Contact Name:</h6>
+              <input type="text" placeholder="Contact name" class="form-control bg-white" required>
+              <h6 class="font-weight-bold pt-4 pb-1">Contact Number:</h6>
+              <input type="text" placeholder="Contact Number" class="form-control bg-white" required>
+            </div>
+            <div class="col-lg-6">
+              <h6 class="font-weight-bold pt-4 pb-1">Contact Name:</h6>
+              <input type="email" placeholder="name@yourmail.com" class="form-control bg-white" required>
+              <h6 class="font-weight-bold pt-4 pb-1">Contact Name:</h6>
+              <input type="text" placeholder="Your address" class="form-control bg-white" required>
+            </div>
+          </div>
+        </fieldset>
+        <!-- seller-information end-->
+  
+        
+        <!-- ad-feature start -->
+  
+        <!-- submit button -->
+        <div class="checkbox d-inline-flex">
+          <input type="checkbox" id="terms-&-condition" class="mt-1">
+          <label for="terms-&-condition" class="ml-2" style="color: aquamarine;">By click you must agree with our
+            <span> <a class="text-success" href="terms-condition.html">Terms & Condition and Posting
+                Rules.</a></span>
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary d-block mt-2">Post Your Ad</button>
+      </form>
+    </div>
+  </section>
+   <!-- newslater -->
+   <div class="container" id="newslater">
+    <h3 class="text-center">Subscribe To ADPTAds Shop For Latest upload.</h3>
+    <div class="input text-center">
+      <input type="text" placeholder="Enter Your Email..">
+      <button id="subscribe">SUBSCRIBE</button>
+    </div>
+  </div>
+  <!-- newslater -->
+
+
+
+
+
+
+  <!-- footer -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>ADPTAds Shop</h3>
+            <p>
+              Kolkata <br>
+              24 paraganas <br>
+              India <br>
+            </p>
+            <strong>Phone:</strong> +917003383913 <br>
+            <strong>Email:</strong> gmitpc5@gmail.com <br>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Usefull Links</h4>
+           <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policey</a></li>
+           </ul>
+          </div>
+
+
+
+         
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+
+           <ul>
+            <li><a href="#">PS 5</a></li>
+            <li><a href="#">Computer</a></li>
+            <li><a href="#">Games</a></li>
+            <li><a href="#">Wallpaper</a></li>
+            <li><a href="#">Gaming Gadgets</a></li>
+           </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Social Networks</h4>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia, quibusdam.</p>
+
+            <div class="socail-links mt-3">
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-skype"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>ADPTAds Shop</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <p> Designed by  <i style="color:#000084">Tapabrata & Dibyajit,<br>Pranoy & Argha</i></p>
+      </div>
+    </div>
+  </footer>
+  <!-- footer -->
+
+
+
+
+
+
+
+  <a href="#" class="arrow"><i><img src="images/900980-removebg-preview (1).png" alt=""></i></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>
